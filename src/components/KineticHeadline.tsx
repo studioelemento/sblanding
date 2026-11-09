@@ -50,9 +50,12 @@ export const KineticHeadline: React.FC<KineticHeadlineProps> = ({
         - Line 1: Static "REDEFINING"
         - Line 2: Rotating Word Slot (rock-solid, zero vertical or horizontal layout shifts)
       */}
-      <h1 className="font-tagline font-normal text-white text-[clamp(1.85rem,6.8vw,5.5rem)] leading-[1.06] tracking-tight uppercase flex flex-col items-center justify-center text-center w-full">
+      <h1 className="font-tagline text-white text-[clamp(1.85rem,6.8vw,5.5rem)] leading-[1.06] tracking-tight uppercase flex flex-col items-center justify-center text-center w-full">
         {/* Line 1: "REDEFINING" */}
-        <span className="text-white drop-shadow-lg block px-2">
+        <span 
+          className="text-white drop-shadow-lg block px-2 text-[clamp(2.4rem,8.5vw,6.9rem)] leading-none mb-1.5"
+          style={{ fontWeight: 850 }}
+        >
           Redefining
         </span>
 
