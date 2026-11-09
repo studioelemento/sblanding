@@ -6,7 +6,7 @@ import { FooterThreeCol } from './components/FooterThreeCol';
 
 export const App: React.FC = () => {
   return (
-    <div className="relative h-[100dvh] w-full flex flex-col justify-between overflow-hidden bg-[#08090C] text-white">
+    <div className="fixed inset-0 h-full h-[100dvh] w-full flex flex-col justify-between overflow-hidden bg-[#08090C] text-white select-none">
       {/* 
         1. Full-Screen Blurred Grayscale Background (60% Blur)
         Uses the official image from Google Drive: /assets/06-11-2026_01.png
