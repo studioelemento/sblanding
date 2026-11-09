@@ -5,10 +5,10 @@
 @tailwind utilities;
 
 :root {
-  --brand-accent: #FF5A00;
-  --brand-accent-glow: rgba(255, 90, 0, 0.35);
-  --brand-accent-subtle: rgba(255, 90, 0, 0.12);
-  --brand-accent-contrast: #000000;
+  --brand-accent: #B2F728;
+  --brand-accent-glow: rgba(178, 247, 40, 0.40);
+  --brand-accent-subtle: rgba(178, 247, 40, 0.15);
+  --brand-accent-contrast: #08090C;
 }
 
 [data-accent="volt"] {

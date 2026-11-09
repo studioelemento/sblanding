@@ -13,9 +13,9 @@ export default {
       },
       colors: {
         brand: {
-          accent: 'var(--brand-accent, #FF5A00)',
-          glow: 'var(--brand-accent-glow, rgba(255, 90, 0, 0.35))',
-          subtle: 'var(--brand-accent-subtle, rgba(255, 90, 0, 0.12))',
+          accent: 'var(--brand-accent, #B2F728)',
+          glow: 'var(--brand-accent-glow, rgba(178, 247, 40, 0.40))',
+          subtle: 'var(--brand-accent-subtle, rgba(178, 247, 40, 0.15))',
           deep: '#08090C',
           surface: '#0E1015',
           elevated: '#161922',
