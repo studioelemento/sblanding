@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Gemunu+Libre:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-accent: #FF5A00;
+  --brand-accent-glow: rgba(255, 90, 0, 0.35);
+  --brand-accent-subtle: rgba(255, 90, 0, 0.12);
+  --brand-accent-contrast: #000000;
+}
+
+[data-accent="volt"] {
+  --brand-accent: #10E885;
+  --brand-accent-glow: rgba(16, 232, 133, 0.35);
+  --brand-accent-subtle: rgba(16, 232, 133, 0.12);
+  --brand-accent-contrast: #000000;
+}
+
+[data-accent="cyan"] {
+  --brand-accent: #00D4FF;
+  --brand-accent-glow: rgba(0, 212, 255, 0.35);
+  --brand-accent-subtle: rgba(0, 212, 255, 0.12);
+  --brand-accent-contrast: #000000;
+}
+
+[data-accent="titanium"] {
+  --brand-accent: #F4F5F8;
+  --brand-accent-glow: rgba(244, 245, 248, 0.25);
+  --brand-accent-subtle: rgba(244, 245, 248, 0.10);
+  --brand-accent-contrast: #08090C;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #08090C;
+  color: #FFFFFF;
+  font-family: 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Kinetic Vertical Swipe-Up Transitions */
+.swipe-word-enter {
+  transform: translateY(115%);
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.swipe-word-active {
+  transform: translateY(0%);
+  opacity: 1;
+  position: relative;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+}
+
+.swipe-word-exit {
+  transform: translateY(-115%);
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+}
+

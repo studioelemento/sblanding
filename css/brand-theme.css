@@ -1,0 +1,128 @@
+/* ==========================================================================
+   SILVERBACK BRAND THEME & TYPOGRAPHY SYSTEM
+   Prepared for: Studio Elemento / Web Development Team
+   Typography specifications strictly follow Silverback Brand Book & Client Handoff:
+   - Aldrich Regular: Primary logotype and display typography
+   - Gemunu Libre Regular: Tagline typography ("Redefining ...")
+   - Space Grotesk: Paragraphs, copyright and metadata
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Gemunu+Libre:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Silverback Grayscale Palette */
+  --bg-deep: #08090C;
+  --bg-surface: #0E1015;
+  --bg-surface-elevated: #161922;
+  --bg-surface-glass: rgba(14, 16, 21, 0.85);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.16);
+  --border-strong: rgba(255, 255, 255, 0.28);
+  
+  --text-primary: #FFFFFF;
+  --text-secondary: #CBD2DE;
+  --text-muted: #838A9A;
+  --text-dim: #4B5262;
+
+  /* Silverback Accent Colorway (Configurable via Review Bar) */
+  --brand-accent: #FF5A00;          /* Signature Industrial Ember */
+  --brand-accent-glow: rgba(255, 90, 0, 0.35);
+  --brand-accent-subtle: rgba(255, 90, 0, 0.12);
+  --brand-accent-contrast: #000000;
+
+  /* Typography System */
+  --font-logo: 'Aldrich', sans-serif;
+  --font-tagline: 'Gemunu Libre', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+
+  /* Layout */
+  --max-width: 1440px;
+}
+
+/* Alternate Accent Themes for Review Mode */
+[data-accent="volt"] {
+  --brand-accent: #10E885;
+  --brand-accent-glow: rgba(16, 232, 133, 0.35);
+  --brand-accent-subtle: rgba(16, 232, 133, 0.12);
+  --brand-accent-contrast: #000000;
+}
+
+[data-accent="cyan"] {
+  --brand-accent: #00D4FF;
+  --brand-accent-glow: rgba(0, 212, 255, 0.35);
+  --brand-accent-subtle: rgba(0, 212, 255, 0.12);
+  --brand-accent-contrast: #000000;
+}
+
+[data-accent="titanium"] {
+  --brand-accent: #F4F5F8;
+  --brand-accent-glow: rgba(244, 245, 248, 0.25);
+  --brand-accent-subtle: rgba(244, 245, 248, 0.10);
+  --brand-accent-contrast: #08090C;
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-weight: 300;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--bg-deep);
+  line-height: 1.6;
+}
+
+/* Typography Classes */
+.font-logo {
+  font-family: var(--font-logo);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 400; /* Aldrich Regular */
+}
+
+.font-tagline {
+  font-family: var(--font-tagline);
+  font-weight: 400; /* Gemunu Libre Regular as specified */
+  letter-spacing: -0.01em;
+}
+
+.font-body {
+  font-family: var(--font-body);
+  font-weight: 300;
+}
+
+.text-accent {
+  color: var(--brand-accent);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
