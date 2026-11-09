@@ -11,18 +11,18 @@ export const BlurredBackground: React.FC = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-700"
         style={{
           backgroundImage: "url('/assets/06-11-2026_01.png')",
-          filter: "grayscale(100%) blur(5px) brightness(0.52) contrast(1.15)",
-          transform: "scale(1.06)" // Prevents border blur clipping
+          filter: "grayscale(100%) blur(4px) brightness(0.65) contrast(1.15)",
+          transform: "scale(1.05)" // Prevents border blur clipping
         }}
       />
 
-      {/* Cinematic Dark Vignette & Depth Gradients */}
+      {/* Cinematic Dark Vignette & Depth Gradients (Softened for 60% visibility) */}
       <div 
         className="absolute inset-0"
         style={{
           background: `
-            radial-gradient(circle at 50% 50%, rgba(8, 9, 12, 0.18) 0%, rgba(8, 9, 12, 0.65) 75%, rgba(8, 9, 12, 0.9) 100%),
-            linear-gradient(to bottom, rgba(8, 9, 12, 0.5) 0%, transparent 25%, transparent 75%, rgba(8, 9, 12, 0.92) 100%)
+            radial-gradient(circle at 50% 50%, rgba(8, 9, 12, 0.10) 0%, rgba(8, 9, 12, 0.45) 75%, rgba(8, 9, 12, 0.75) 100%),
+            linear-gradient(to bottom, rgba(8, 9, 12, 0.35) 0%, transparent 25%, transparent 75%, rgba(8, 9, 12, 0.80) 100%)
           `
         }}
       />
