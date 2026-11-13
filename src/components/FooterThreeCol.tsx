@@ -1,6 +1,7 @@
 import React from 'react';
 import { LinkedInQR } from './LinkedInQR';
 import { ArrowUpRight } from 'lucide-react';
+import { SafeImage } from './SafeImage';
 
 interface FooterThreeColProps {
   linkedInUrl?: string;
@@ -24,10 +25,15 @@ export const FooterThreeCol: React.FC<FooterThreeColProps> = ({
             className="inline-flex items-center group transition-transform duration-200 hover:-translate-y-0.5"
             aria-label="Silverback Home"
           >
-            <img 
-              src="/assets/branding/logo-white-cropped.svg" 
-              alt="SILVERBACK" 
+            <SafeImage
+              src="/assets/branding/logo-white-cropped.svg"
+              alt="SILVERBACK"
+              width={260}
+              height={36}
+              loading="lazy"
+              decoding="async"
               className="h-7 sm:h-8 md:h-8 lg:h-9 w-auto max-w-[190px] sm:max-w-[220px] md:max-w-[260px] filter drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)] object-contain"
+              fallbackClassName="h-7 w-[140px] bg-white/10 rounded"
             />
           </a>
         </div>

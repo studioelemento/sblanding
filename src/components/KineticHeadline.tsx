@@ -43,7 +43,7 @@ export const KineticHeadline: React.FC<KineticHeadlineProps> = ({
   }, [currentIndex, phrases.length, intervalMs]);
 
   return (
-    <div className="w-full max-w-6xl mx-auto flex flex-col items-center justify-center text-center select-none px-2 sm:px-4">
+    <div className="w-full max-w-6xl mx-auto flex flex-col items-center justify-center text-center select-none px-2 sm:px-4 max-md:-translate-y-[11dvh] md:translate-y-0">
       {/* 
         Fully Mobile-Responsive Kinetic Headline:
         - Uses fluid clamp typography: scales dynamically from small phone screens (320px) to ultra-wide displays
@@ -53,7 +53,7 @@ export const KineticHeadline: React.FC<KineticHeadlineProps> = ({
       <h1 className="font-tagline text-white text-[clamp(1.85rem,6.8vw,5.5rem)] leading-[1.06] tracking-tight uppercase flex flex-col items-center justify-center text-center w-full">
         {/* Line 1: "REDEFINING" */}
         <span 
-          className="text-white drop-shadow-lg block px-2 text-[clamp(2.4rem,8.5vw,6.9rem)] leading-none mb-1.5"
+          className="text-white drop-shadow-lg block px-2 text-[clamp(2.4rem,8.5vw,6.9rem)] md:text-[clamp(2.4rem,5.5vw,6.25rem)] leading-none mb-1.5"
           style={{ fontWeight: 850 }}
         >
           Redefining

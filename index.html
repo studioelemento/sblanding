@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full overflow-hidden overscroll-none">
+<html lang="en" class="h-full">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/assets/logoWithHead.png" />
@@ -37,11 +37,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Gemunu+Libre:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Preload Hero Background Image -->
-    <link rel="preload" as="image" href="/assets/06-11-2026_01.png" />
+    <!-- Critical images: logo first, then hero + promo by viewport -->
+    <link rel="preload" as="image" href="/assets/logoWithHead.png" fetchpriority="high" />
+    <link rel="preload" as="image" href="/assets/06-11-2026_01.png" fetchpriority="low" />
+    <link rel="preload" as="image" href="/forMb1.png" media="(max-width: 767px)" />
+    <link rel="preload" as="image" href="/forPc.jpg" media="(min-width: 768px)" />
   </head>
-  <body class="bg-[#08090C] text-white h-full h-[100dvh] w-full overflow-hidden overscroll-none fixed inset-0">
-    <div id="root" class="h-full w-full overflow-hidden"></div>
+  <body class="bg-[#08090C] text-white min-h-[100dvh] w-full">
+    <div id="root" class="min-h-[100dvh] w-full"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
