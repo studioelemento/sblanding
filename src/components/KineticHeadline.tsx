@@ -53,7 +53,7 @@ export const KineticHeadline: React.FC<KineticHeadlineProps> = ({
       <h1 className="font-tagline text-white text-[clamp(1.85rem,6.8vw,5.5rem)] leading-[1.06] tracking-tight uppercase flex flex-col items-center justify-center text-center w-full">
         {/* Line 1: "REDEFINING" */}
         <span 
-          className="text-white drop-shadow-lg block px-2 text-[clamp(2.4rem,8.5vw,6.9rem)] md:text-[clamp(2.4rem,5.5vw,6.25rem)] leading-none mb-1.5"
+          className="text-white drop-shadow-lg block px-2 text-[clamp(2.4rem,8.5vw,6.9rem)] md:text-[clamp(2.4rem,4.5vw,6.25rem)] leading-none mb-1.5"
           style={{ fontWeight: 850 }}
         >
           Redefining
@@ -78,7 +78,7 @@ export const KineticHeadline: React.FC<KineticHeadlineProps> = ({
             return (
               <span 
                 key={phrase} 
-                className={`${transitionClass} text-[clamp(1.85rem,6.8vw,5.5rem)]`}
+                className={`${transitionClass} text-[clamp(1.85rem,3.1vw,5.5rem)]`}
                 style={{ 
                   textShadow: '0 0 35px var(--brand-accent-glow)',
                   lineHeight: '1.25'

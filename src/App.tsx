@@ -58,7 +58,7 @@ export const App: React.FC = () => {
         </div>
         {/* Desktop */}
         <SafeImage
-          src="/forPc.jpg"
+          src="/forPc.png"
           alt="Silverback — battery exchange, electric vehicles, and outdoor cooling highlights"
           width={1280}
           height={150}
