@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { LinkedInQR } from './LinkedInQR';
+import { LinkedInQRModal } from './LinkedInQRModal';
 import { ArrowUpRight } from 'lucide-react';
 import { SafeImage } from './SafeImage';
 
@@ -10,6 +11,8 @@ interface FooterThreeColProps {
 export const FooterThreeCol: React.FC<FooterThreeColProps> = ({
   linkedInUrl = 'https://www.linkedin.com/company/silverback-ev'
 }) => {
+  const [qrPreviewOpen, setQrPreviewOpen] = useState(false);
+
   return (
     <footer className="w-full relative z-20 border-t border-white/5 md:border-white/10 bg-gradient-to-t from-black/90 via-black/60 to-transparent md:bg-black/40 md:backdrop-blur-xl pt-3 pb-3 sm:py-4 md:py-5 px-4 sm:px-8 md:px-12 transition-all">
       <div className="max-w-7xl mx-auto flex flex-col md:grid md:grid-cols-3 gap-2.5 sm:gap-3.5 md:gap-4 items-center">
@@ -55,31 +58,39 @@ export const FooterThreeCol: React.FC<FooterThreeColProps> = ({
             - Mobile: Centered, touch-friendly tap target (min 44px)
             =================================================================== */}
         <div className="flex items-center justify-center md:justify-end order-2 md:order-3 w-full md:w-auto">
-          <a
-            href={linkedInUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Scan with phone or click to open LinkedIn profile"
-            className="group inline-flex items-center gap-2.5 sm:gap-3 px-3 py-1.5 sm:px-3 sm:py-2 md:px-3.5 md:py-2 rounded-lg border border-white/15 bg-[#0E1015]/85 hover:bg-[#161922] hover:border-brand-accent backdrop-blur-lg transition-all duration-300 shadow-lg hover:shadow-[0_0_20px_var(--brand-accent-glow)] hover:-translate-y-0.5 active:scale-95"
-          >
-            {/* Scannable SVG QR Frame */}
-            <div className="p-1 bg-white rounded flex-shrink-0 shadow-sm transition-transform duration-200 group-hover:scale-105">
-              <LinkedInQR
-                className="h-11 w-11 sm:h-12 sm:w-12 md:h-14 md:w-14 rounded-[2px] object-contain"
-              />
-            </div>
+          <div className="inline-flex items-center gap-2.5 sm:gap-3 px-3 py-1.5 sm:px-3 sm:py-2 md:px-3.5 md:py-2 rounded-lg border border-white/15 bg-[#0E1015]/85 backdrop-blur-lg shadow-lg">
+            <button
+              type="button"
+              title="Tap to enlarge QR code"
+              aria-label="Enlarge LinkedIn QR code"
+              onClick={() => setQrPreviewOpen(true)}
+              className="p-1 bg-white rounded flex-shrink-0 shadow-sm transition-transform duration-200 hover:scale-105 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent focus-visible:ring-offset-2 focus-visible:ring-offset-[#0E1015] active:scale-95"
+            >
+              <LinkedInQR className="h-11 w-11 sm:h-12 sm:w-12 md:h-14 md:w-14 rounded-[2px] object-contain" />
+            </button>
 
-            {/* Clickable / Tappable Button Text */}
-            <div className="flex flex-col text-left pr-1 sm:pr-2">
+            <a
+              href={linkedInUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Open LinkedIn profile"
+              className="group flex flex-col text-left pr-1 sm:pr-2 transition-colors hover:text-brand-accent"
+            >
               <span className="font-logo text-[10px] sm:text-xs text-white uppercase tracking-wider flex items-center gap-1 group-hover:text-brand-accent transition-colors">
                 <span>SCAN TO KNOW MORE</span>
                 <ArrowUpRight className="w-3 h-3 text-brand-accent transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </span>
-              <span className="font-body font-light text-[9px] sm:text-[10px] text-gray-400">
+              <span className="font-body font-light text-[9px] sm:text-[10px] text-gray-400 group-hover:text-gray-300">
                 Official LinkedIn Network
               </span>
-            </div>
-          </a>
+            </a>
+          </div>
+
+          <LinkedInQRModal
+            open={qrPreviewOpen}
+            onClose={() => setQrPreviewOpen(false)}
+            linkedInUrl={linkedInUrl}
+          />
         </div>
 
       </div>
