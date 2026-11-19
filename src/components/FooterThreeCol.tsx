@@ -64,7 +64,9 @@ export const FooterThreeCol: React.FC<FooterThreeColProps> = ({
           >
             {/* Scannable SVG QR Frame */}
             <div className="p-1 bg-white rounded flex-shrink-0 shadow-sm transition-transform duration-200 group-hover:scale-105">
-              <LinkedInQR size={32} />
+              <LinkedInQR
+                className="h-11 w-11 sm:h-12 sm:w-12 md:h-14 md:w-14 rounded-[2px] object-contain"
+              />
             </div>
 
             {/* Clickable / Tappable Button Text */}
