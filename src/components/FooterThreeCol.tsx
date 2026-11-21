@@ -48,7 +48,7 @@ export const FooterThreeCol: React.FC<FooterThreeColProps> = ({
             =================================================================== */}
         <div className="flex flex-col items-center justify-center text-center order-3 md:order-2 w-full mt-0.5 md:mt-0">
           <p className="font-body font-normal text-[11px] sm:text-xs md:text-sm text-gray-400 tracking-wide">
-            © 2026 Silverback Mobility. All rights reserved.
+            © 2026 Silverback Mobility Solutions Pvt. Ltd. <br /> All rights reserved.
           </p>
         </div>
 
