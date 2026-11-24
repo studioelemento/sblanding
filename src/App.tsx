@@ -21,9 +21,10 @@ export const App: React.FC = () => {
         <main className="relative flex flex-1 flex-col items-center justify-center px-4 min-h-0 md:flex-1 md:min-h-0 md:py-2 overflow-visible md:overflow-hidden">
           <KineticHeadline
             phrases={[
-              'dignity',
               'the ride',
               'the pit stop',
+              'Care',
+              'Welfare',
               'the delivery experience'
             ]}
             intervalMs={2000}
